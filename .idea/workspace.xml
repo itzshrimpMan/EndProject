@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="deb2a269-e174-4cc9-a6db-8cdf4febde61" name="Changes" comment="Added a menu">
-      <change afterPath="$PROJECT_DIR$/src/Buy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StockTransactions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Unpack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/checkInput.java" afterDir="false" />
+    <list default="true" id="deb2a269-e174-4cc9-a6db-8cdf4febde61" name="Changes" comment="Gjorde klar basen till menyn och basen till all logistik">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +63,7 @@
       <workItem from="1682440604411" duration="2362000" />
       <workItem from="1682503843303" duration="15406000" />
       <workItem from="1682956682717" duration="10739000" />
-      <workItem from="1683031016620" duration="707000" />
+      <workItem from="1683031016620" duration="1843000" />
     </task>
     <task id="LOCAL-00001" summary="Added a menu">
       <created>1682450496305</created>
@@ -80,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682450496305</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Gjorde klar basen till menyn och basen till all logistik">
+      <created>1683048318780</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683048318780</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +104,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added a menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a menu" />
+    <MESSAGE value="Gjorde klar basen till menyn och basen till all logistik" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gjorde klar basen till menyn och basen till all logistik" />
   </component>
 </project>
