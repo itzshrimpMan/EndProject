@@ -1,38 +1,57 @@
 import javax.swing.*;
+import java.awt.*;
+import java.net.*;
+import java.awt.event.*;
+import java.util.EventObject;
 
-public class graphics extends JFrame {
-    public graphics(){
-
-        this.setTitle("Menu");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+public class graphics extends JFrame implements ActionListener {
             JFrame frame = new JFrame("Menu");
-            JPanel panel = new JPanel();
+    public graphics(){
+            JButton buttonBuy = new JButton("Buy stocks");
+            JButton buttonSell = new JButton("Sell stocks");
+            JButton buttonList = new JButton("List holdings");
+            JButton buttonExit = new JButton("Exit");
 
-            JLabel label = new JLabel("Choose an option:");
-            panel.add(label);
+            buttonBuy.addActionListener(this);
+            buttonSell.addActionListener(this);
+            buttonList.addActionListener(this);
+            buttonExit.addActionListener((event) -> System.exit(0));
 
-            JButton button1 = new JButton("Option 1");
-            button1.addActionListener(e -> JOptionPane.showMessageDialog(null, "You chose option 1."));
-            panel.add(button1);
+            frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
 
-            JButton button2 = new JButton("Option 2");
-            button2.addActionListener(e -> JOptionPane.showMessageDialog(null, "You chose option 2."));
-            panel.add(button2);
+            frame.add(buttonBuy);
+            frame.add(buttonSell);
+            frame.add(buttonList);
+            frame.add(buttonExit);
 
-            JButton button3 = new JButton("Option 3");
-            button3.addActionListener(e -> JOptionPane.showMessageDialog(null, "You chose option 3."));
-            panel.add(button3);
-
-            JButton button4 = new JButton("Exit");
-            button4.addActionListener(e -> System.exit(0));
-            panel.add(button4);
-
-            frame.add(panel);
-            frame.setSize(300, 150);
+            frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+            frame.setSize(450,450);
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
+        }
 
+        public void actionPerformed(ActionEvent e){
+            System.out.println("Action performed " + e.getActionCommand());
+
+            String mSelection = e.getActionCommand();
+            System.out.println(mSelection);
+            switch (mSelection){
+                case "Buy stocks":
+                    System.out.println("Köp");
+                    Buy bInstance = new Buy();
+                    bInstance.buyStocksOnMarket();
+                    break;
+                case "Sell stocks":
+                    System.out.println("Sälj");
+                    Sell sInstance = new Sell();
+                    sInstance.sellStocksOnMarket();
+                    break;
+                case "List holdings":
+                    System.out.println("Lista");
+                    break;
+                default:
+                    System.out.println("Not a valid option.");
+            }
         }
 
     }

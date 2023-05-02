@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="deb2a269-e174-4cc9-a6db-8cdf4febde61" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="deb2a269-e174-4cc9-a6db-8cdf4febde61" name="Changes" comment="Added a menu">
+      <change afterPath="$PROJECT_DIR$/src/Buy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Sell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StockTransactions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Unpack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/checkInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/graphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics.java" afterDir="false" />
@@ -29,7 +34,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Ndu0kV4cQksVlFbli6RYSnxw45" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,13 +46,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Programmering 2/ClickyPanels",
+    "last_opened_file_path": "C:/Programmering 2/EndProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programmering 2\EndProject\out\production\EndProject" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -56,8 +68,19 @@
       <updated>1680006059140</updated>
       <workItem from="1680006061147" duration="2748000" />
       <workItem from="1680609046758" duration="3595000" />
-      <workItem from="1682440604411" duration="2240000" />
+      <workItem from="1682440604411" duration="2362000" />
+      <workItem from="1682503843303" duration="15406000" />
+      <workItem from="1682956682717" duration="10739000" />
+      <workItem from="1683031016620" duration="707000" />
     </task>
+    <task id="LOCAL-00001" summary="Added a menu">
+      <created>1682450496305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682450496305</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,10 +91,20 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added a menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a menu" />
   </component>
 </project>
