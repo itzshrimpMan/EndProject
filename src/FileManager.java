@@ -6,7 +6,7 @@ import java.util.Scanner; // To read from text files
 
 public class FileManager {
 
-    //Method to create the Portfolio file (unless it already exists)
+    //Metod för att skapa portföljfilen (såvida den inte redan finns)
     static void createFile() {
         try {
             File portfolio = new File("StockPortfolio.txt");
@@ -21,7 +21,7 @@ public class FileManager {
         }
     }
 
-    //Method tp read content from the Stock Portfolio file and put in an ArrayList
+    //Metod för att läsa innehåll från aktieportföljfilen och lägga i en ArrayList
     public static ArrayList<String> readFile()
     {
         ArrayList<String> stocks = new ArrayList<String>();
@@ -32,7 +32,7 @@ public class FileManager {
             System.out.println("In the method of FileManager");
             while (readfile.hasNextLine()) {
                 String data = readfile.nextLine();
-                // Put the file content row by row in an ArrayList to work with
+                // Lägg filens innehåll rad för rad i en ArrayList att arbeta med
                 System.out.println(data);
                 stocks.add(data);
 
@@ -47,7 +47,7 @@ public class FileManager {
         return stocks;
     }
 
-    //Method to write the content of the stocks ArrayList to a file
+    //Metod för att skriva innehållet i aktiernas ArrayList till en fil
     public static void writeFile(ArrayList<String> stocks){
 
         try {

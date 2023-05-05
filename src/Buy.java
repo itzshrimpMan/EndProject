@@ -8,14 +8,18 @@ import java.util.EventObject;
 import java.util.Scanner;
 
 public class Buy extends JFrame implements ActionListener{
-        JTextField nameField, volumeField, priceField;
-        JFrame buyFrame = new JFrame("Buy Stocks");
+        JTextField nameField, volumeField, priceField;  //skapar variablerna för alla fälten i JFrame
+        JFrame buyFrame = new JFrame("Buy Stocks"); //Skapar ett nytt JFrame
 
     public void buyStocksOnMarket() {
+
+        //Resten av variablerna
+        //Hela kodblocket är bara menyn till köp
         JPanel fieldPanel, mainPanel;
         JLabel name, volume, price, l_register;
         JButton b_save, b_cancel;
         GridBagConstraints c;
+
 
         fieldPanel = new JPanel();
         fieldPanel.setLayout(new GridBagLayout());
@@ -76,6 +80,7 @@ public class Buy extends JFrame implements ActionListener{
         buyFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
+    //Detta kodblocket sköter alla inmatningar - Button clicks och inmatning i textfälten.
     public void actionPerformed(ActionEvent e){
         String buySelection = e.getActionCommand();
         System.out.println(buySelection);
@@ -107,7 +112,7 @@ public class Buy extends JFrame implements ActionListener{
                 //Kontrollerar giltigt värde på priset
                 double inPrice = 0;
                 try {
-                    Double.parseDouble(priceField.getText());//Kontrollerar att det är en double
+                    Double.parseDouble(priceField.getText()); //Kontrollerar att det är en double
                     inPrice = Double.parseDouble(priceField.getText());
                     if (instance.checkInput(inPrice) == false) {
                         break;
@@ -133,13 +138,13 @@ public class Buy extends JFrame implements ActionListener{
         }
 
     public static void buyStocks(String inName, int inVolume, double inPrice) {
-        //Read the stockfile to get the current Stock holdings into an Array
+        //Läs stockfilen för att få de aktuella aktieinnehaven i en Array
         ArrayList<String> stocklist = FileManager.readFile();
 
         System.out.println("The stocklist before : " + stocklist);
 
-        //Check if the stock is already owned or not
-        //Loop through the array to find the position of the existing stock
+        //Kontrollera om aktien redan ägs eller inte
+        //loopa genom arrayen för att hitta positionen för det befintliga lagret
         int i = 0;
         Boolean exist = false;
 
@@ -154,21 +159,21 @@ public class Buy extends JFrame implements ActionListener{
         }
 
         if (exist) {
-            //The stock is already owned - add more to the holdings
+            //Aktien ägs redan - adderar mer till holding
             System.out.println("The stock " + inName + " is already in the list");
 
             String stockrow = stocklist.get(i);
             System.out.println("The stock " + stockrow + " to be modified");
 
-            //Add the volume of the new stocks to the existing
+            //Plusar ihop den nya och den gamla volymen av aktier
             int exVolume = Integer.parseInt(Unpack.getVol(stockrow));
             int newVolume = exVolume + inVolume;
 
-            //Calculate the new buying price of the stocks
+            //Räknar ut det nya köppriset
             Double exPrice = Double.parseDouble(Unpack.getPrice(stockrow));
             Double newPrice = ((exVolume * exPrice) + (inVolume * inPrice)) / newVolume;
 
-            //Updating the row in the Array with the new data for the stock
+            //Uppdaterar raden i Array med den nya datan av aktien
             String sVolume = String.valueOf(newVolume);
             String sPrice = String.valueOf(newPrice);
             stocklist.set(i, inName + ";" + sVolume + ";" + sPrice);
@@ -177,7 +182,7 @@ public class Buy extends JFrame implements ActionListener{
         } else {
 
             System.out.println("The stock " + inName + " is not in the list");
-            //The stock is new - add to the list
+            //Aktien är ny - addera till listan
             String sVolume = String.valueOf(inVolume);
             String sPrice = String.valueOf(inPrice);
             stocklist.add(inName + ";" + sVolume + ";" + sPrice);

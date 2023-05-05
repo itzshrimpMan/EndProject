@@ -130,15 +130,10 @@ public class Sell extends JFrame implements ActionListener {
     }
     public static void sellStocks(String inName, int inVolume, double inPrice)
     {
-        //Read the stockfile to get the current Stock holdings into an Array
+        //Läs stockfilen för att få det aktuella aktieinnehavet i en Array
         ArrayList<String> stocklist = FileManager.readFile();
 
         System.out.println("The stocklist before : "+stocklist);
-
-        //User input on what stock to sell
-        Scanner inObj = new Scanner(System.in);
-        System.out.print("Enter the name of stock to sell: ");
-        String inName = inObj.nextLine();
 
         int i = 0;
         Boolean exist = false;
@@ -154,52 +149,45 @@ public class Sell extends JFrame implements ActionListener {
         }
 
 
-        //Check if the stock is already owned or not
-        //Loop through the array to find the position of the existing stock
+        //Kontrollera om aktien redan ägs eller inte
+        //loopa genom arrayen för att hitta positionen för det befintliga lagret
 
         if (exist) {
-            //The stock is owned - then it can be sold
+            //Beståndet ägs - då kan det säljas
             System.out.println("The stock " + inName + " is in the list");
 
-            //Make a string of the actual row in the Array to extract and modify the values
+            //Gör en sträng av den faktiska raden i Arrayen för att extrahera och ändra värdena
             String stockrow = stocklist.get(i);
             System.out.println("The stock " + stockrow + " to be modified");
 
-            System.out.print("Enter the quantity to sell     : ");
-            int inVol = inObj.nextInt();
-
             int exVolume = Integer.parseInt(Unpack.getVol(stockrow)); //Existing volume
 
-            //Check if the sales volume is larger than owned - then set to owned
-            if (inVol > exVolume ) {
-                inVol = exVolume;
+            //Kontrollera om försäljningsvolymen är större än ägd - sedan ändra till ägd
+            if (inVolume > exVolume ) {
+                inVolume = exVolume;
             }
 
-            //Calculate the remaining volume after selling (0 if all stocks are sold)
-            int newVolume = exVolume - inVol;
+            //Beräkna den återstående volymen efter försäljning (0 om alla aktier är sålda)
+            int newVolume = exVolume - inVolume;
 
-            //Enter price to which the stock was sold
-            System.out.print("Enter the stock price         : ");
-            Double inPrice = inObj.nextDouble();
-
-            //Retrieve the buy price of the stock from the array
+            //Hämta köppriset för aktien från arrayen
             Double exPrice = Double.parseDouble(Unpack.getPrice(stockrow));
-            Double profit = (inPrice - exPrice)*inVol;
+            Double profit = (inPrice - exPrice)*inVolume;
             System.out.println("The stock " + inName + " generated " + String.valueOf(profit) + " before tax");
 
-            //Check if the stock holding in the file should be updated or deleted (all sold)
+            //Kontrollera om aktieinnehavet i filen ska uppdateras eller raderas (alla sålda)
             if (newVolume>0){
                 //Update holding in Array
                 String sVolume = String.valueOf(newVolume);
-                String sPrice = String.valueOf(exPrice); //No update on buy price when selling teh stocks
+                String sPrice = String.valueOf(exPrice); //Ingen uppdatering av köpkurs vid försäljning av aktier
                 stocklist.set(i, inName + ";" + sVolume + ";" + sPrice);
 
             }else {
-                //All is sold and the entry can be removed
+                //Allt är sålt och posten kan tas bort
                 stocklist.remove(i);
             }
 
-            //Updating the file with the Array of the current stock holdigs
+            //Uppdatering av filen med Arrayen för de aktuella stock holdigs
             System.out.println("The stocklist after selling : " + stocklist);
             FileManager.writeFile(stocklist);
 

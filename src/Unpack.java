@@ -2,7 +2,7 @@
 
 public class Unpack {
 
-    //Method that gets the name out of the ArrayList and returns
+    //Metod som hämtar namnet från ArrayList och returnerar
     public static String getName(String stocks){
 
         System.out.println("Into the getName method with the Array " + stocks);
@@ -15,7 +15,7 @@ public class Unpack {
 
     }
 
-    //Method that gets the volume out of the ArrayList and returns
+    //Metod som får ut volymen från ArrayList och returnerar
     public static String getVol(String stocks){
 
         System.out.println("Into the getVol method with the Array " + stocks);
@@ -28,7 +28,7 @@ public class Unpack {
 
     }
 
-    //Method that gets the price out of the ArrayList and returns
+    //Metod som får ut priset från ArrayList och returnerar
     public static String getPrice(String stocks){
 
         System.out.println("Into the getPrice method with the Array " + stocks);
@@ -41,7 +41,7 @@ public class Unpack {
 
     }
 
-    //Method that gets the current value out of the ArrayList and returns
+    //Metod som hämtar det aktuella värdet från ArrayList och returnerar
     public static String getVal(String stocks){
 
         System.out.println("Into the getVal method with the Array " + stocks);

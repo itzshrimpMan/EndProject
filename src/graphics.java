@@ -5,7 +5,7 @@ import java.awt.event.*;
 import java.util.EventObject;
 
 public class graphics extends JFrame implements ActionListener {
-            JFrame frame = new JFrame("Menu");
+            JFrame frame = new JFrame("Stock portfolio - Main Menu");
     public graphics(){
             JButton buttonBuy = new JButton("Buy stocks");
             JButton buttonSell = new JButton("Sell stocks");
@@ -18,6 +18,13 @@ public class graphics extends JFrame implements ActionListener {
             buttonExit.addActionListener((event) -> System.exit(0));
 
             frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
+
+            //Centrerar alla knappar
+            buttonBuy.setAlignmentX(Component.CENTER_ALIGNMENT);
+            buttonSell.setAlignmentX(Component.CENTER_ALIGNMENT);
+            buttonList.setAlignmentX(Component.CENTER_ALIGNMENT);
+            buttonExit.setAlignmentX(Component.CENTER_ALIGNMENT);
+
 
             frame.add(buttonBuy);
             frame.add(buttonSell);
@@ -48,6 +55,7 @@ public class graphics extends JFrame implements ActionListener {
                     break;
                 case "List holdings":
                     System.out.println("Lista");
+                    ListStocks.ListHolding();
                     break;
                 default:
                     System.out.println("Not a valid option.");

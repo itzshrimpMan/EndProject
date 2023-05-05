@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="deb2a269-e174-4cc9-a6db-8cdf4febde61" name="Changes" comment="Gjorde klar basen till menyn och basen till all logistik">
+      <change afterPath="$PROJECT_DIR$/src/ListStocks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StockPortfolio.txt" beforeDir="false" afterPath="$PROJECT_DIR$/StockPortfolio.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Buy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Buy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StockTransactions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Unpack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Unpack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +42,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Programmering 2/EndProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Programmering 2/EndProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Programmering 2\EndProject\out\production\EndProject" />
@@ -64,6 +73,7 @@
       <workItem from="1682503843303" duration="15406000" />
       <workItem from="1682956682717" duration="10739000" />
       <workItem from="1683031016620" duration="1843000" />
+      <workItem from="1683125543470" duration="5377000" />
     </task>
     <task id="LOCAL-00001" summary="Added a menu">
       <created>1682450496305</created>
